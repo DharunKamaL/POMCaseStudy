@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="91167" started-at="2023-03-12T19:41:37 IST" finished-at="2023-03-12T19:43:08 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="91167" started-at="2023-03-12T19:41:37 IST" finished-at="2023-03-12T19:43:08 IST">
+      <class name="testScripts.BlazeWebApp">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="setUp" is-config="true" duration-ms="23764" started-at="2023-03-12T19:41:37 IST" finished-at="2023-03-12T19:42:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validLogin()[pri:1, instance:testScripts.BlazeWebApp@5427c60c]" name="validLogin" duration-ms="7727" started-at="2023-03-12T19:42:01 IST" finished-at="2023-03-12T19:42:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="7" started-at="2023-03-12T19:42:09 IST" finished-at="2023-03-12T19:42:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validLogin status=SUCCESS method=BlazeWebApp.validLogin()[pri:1, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="7048" started-at="2023-03-12T19:42:09 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:16 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Phones]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Samsung galaxy s6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemtoCart -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-12T19:42:16 IST" finished-at="2023-03-12T19:42:16 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addItemtoCart status=SUCCESS method=BlazeWebApp.addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="10525" started-at="2023-03-12T19:42:16 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Phones]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nokia lumia 1520]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemtoCart -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="2" started-at="2023-03-12T19:42:26 IST" finished-at="2023-03-12T19:42:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addItemtoCart status=SUCCESS method=BlazeWebApp.addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="11434" started-at="2023-03-12T19:42:26 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:38 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Laptops]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MacBook air]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemtoCart -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="5" started-at="2023-03-12T19:42:38 IST" finished-at="2023-03-12T19:42:38 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addItemtoCart status=SUCCESS method=BlazeWebApp.addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="10681" started-at="2023-03-12T19:42:38 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Monitors]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Apple monitor 24]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemtoCart -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="2" started-at="2023-03-12T19:42:49 IST" finished-at="2023-03-12T19:42:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addItemtoCart status=SUCCESS method=BlazeWebApp.addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="8685" started-at="2023-03-12T19:42:49 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:57 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Monitors]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ASUS Full HD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemtoCart -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="10" started-at="2023-03-12T19:42:57 IST" finished-at="2023-03-12T19:42:57 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addItemtoCart status=SUCCESS method=BlazeWebApp.addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="deleteItem()[pri:3, instance:testScripts.BlazeWebApp@5427c60c]" name="deleteItem" duration-ms="3784" started-at="2023-03-12T19:42:57 IST" finished-at="2023-03-12T19:43:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteItem -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-12T19:43:01 IST" finished-at="2023-03-12T19:43:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteItem status=SUCCESS method=BlazeWebApp.deleteItem()[pri:3, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="finalOrder()[pri:4, instance:testScripts.BlazeWebApp@5427c60c]" name="finalOrder" duration-ms="4730" started-at="2023-03-12T19:43:01 IST" finished-at="2023-03-12T19:43:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalOrder -->
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-12T19:43:06 IST" finished-at="2023-03-12T19:43:06 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=finalOrder status=SUCCESS method=BlazeWebApp.finalOrder()[pri:4, instance:testScripts.BlazeWebApp@5427c60c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method status="PASS" signature="extentfinishUp()[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="extentfinishUp" is-config="true" duration-ms="2509" started-at="2023-03-12T19:43:06 IST" finished-at="2023-03-12T19:43:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentfinishUp -->
+      </class> <!-- testScripts.BlazeWebApp -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
