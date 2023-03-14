@@ -8,7 +8,9 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,6 +19,7 @@ public class TestBase {
 	public static Actions actions = null;
 	public static Properties prop = null;
 	public static WebDriver driver = null;
+	
 
 
 	public TestBase() {
@@ -42,7 +45,9 @@ public class TestBase {
 		String browser = prop.getProperty("browser");
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));

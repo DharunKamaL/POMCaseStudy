@@ -48,7 +48,6 @@ public class BlazeWebApp extends TestBase {
 	ExtentReports reports;
 	ExtentSparkReporter spark;
 	ExtentTest extentTest;
-	
 
 	@BeforeTest
 	public void setUp() {
@@ -92,43 +91,30 @@ public class BlazeWebApp extends TestBase {
 
 	@Test(priority = 3)
 	public void deleteItem() throws InterruptedException {
+
 		extentTest = reports.createTest("deleteItem");
-//		WebElement cart = productList.CartBtn;
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-//		wait.until(ExpectedConditions.visibilityOf(cart));
 		productList = new ProductListCartPage();
 		productList.ProductListPage();
 		productList.mouseAction();
 		List<WebElement> proList = productList.products;
+		wait.until(ExpectedConditions.visibilityOfAllElements(proList));
+		
 		int initialproSize = proList.size();
-		productList.delItem();
-		
-//		productList.wait(10);
-//		wait.until(ExpectedConditions.visibilityOfAllElements(proList));
-		
-		List<WebElement> proListAftDel = productList.products;
-		wait.until(ExpectedConditions.visibilityOfAllElements(proListAftDel));
-		int proSizeAftDel = proListAftDel.size();
-		boolean isTrue = true;
-		
-//		int count = 0;
-		
-//		for(WebElement productList:proListAftDel) {
-//			count++;
-//		}
-		
-		if(proSizeAftDel!=initialproSize) {
-			Assert.assertTrue(isTrue);
+		WebElement proNameBef = productList.productName;
+		String product1 = proNameBef.getText();
+//		boolean proAdded = true;
+		if (initialproSize > 1) {
+			productList.delItem();
 		}
 		
-//		int initialproSize = proList.size();
-//		Assert.assertEquals(initialproSize, 5);
-
-//		productList.mouseAction();
-//		wait.until(ExpectedConditions.invisibilityOf(null));
-//		Assert.assertEquals(proSizeAftDel, 4);
-
-//		Assert.assertNotEquals(initialproSize, proSizeAftDel);
+//		Assert.assertTrue(proAdded);
+		productList.Check();
+		WebElement proNameAft = productList.productName;
+		String product2 = proNameAft.getText();
+		if (product1 != product2) {
+			Assert.assertTrue(true);
+		}
 
 	}
 

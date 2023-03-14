@@ -22,6 +22,9 @@ public class ProductListCartPage extends TestBase{
 	@FindBy(xpath = "//tr/td[2]")
 	public List<WebElement> products;
 	
+	@FindBy(xpath = "(//tr/td[2])[1]")
+	public WebElement productName;
+	
 	@FindBy(xpath = "(//tr/td//a)[1]")
 	WebElement DelBtn;
 	
@@ -39,10 +42,6 @@ public class ProductListCartPage extends TestBase{
 		actions.scrollByAmount(0, 200).perform();
 	}
 	
-//	public void productQuantity() {
-//		products.size();
-//	}
-	
 	public void delItem() {
 		
 		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
@@ -50,5 +49,11 @@ public class ProductListCartPage extends TestBase{
 		DelBtn.click();
 		
 	}
+	
+	public void Check() {
+		wait.until(ExpectedConditions.visibilityOfAllElements(products));		
+	}
+	
+	
 	
 }
