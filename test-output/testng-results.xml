@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="91167" started-at="2023-03-12T19:41:37 IST" finished-at="2023-03-12T19:43:08 IST">
+  <suite name="Default suite" duration-ms="250264" started-at="2023-03-14T15:49:53 IST" finished-at="2023-03-14T15:54:03 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="91167" started-at="2023-03-12T19:41:37 IST" finished-at="2023-03-12T19:43:08 IST">
+    <test name="Default test" duration-ms="250264" started-at="2023-03-14T15:49:53 IST" finished-at="2023-03-14T15:54:03 IST">
       <class name="testScripts.BlazeWebApp">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="setUp" is-config="true" duration-ms="23764" started-at="2023-03-12T19:41:37 IST" finished-at="2023-03-12T19:42:01 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="setUp" is-config="true" duration-ms="16091" started-at="2023-03-14T15:49:53 IST" finished-at="2023-03-14T15:50:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validLogin()[pri:1, instance:testScripts.BlazeWebApp@5427c60c]" name="validLogin" duration-ms="7727" started-at="2023-03-12T19:42:01 IST" finished-at="2023-03-12T19:42:09 IST">
+        <test-method status="PASS" signature="validLogin()[pri:1, instance:testScripts.BlazeWebApp@5427c60c]" name="validLogin" duration-ms="41386" started-at="2023-03-14T15:50:09 IST" finished-at="2023-03-14T15:50:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="7" started-at="2023-03-12T19:42:09 IST" finished-at="2023-03-12T19:42:09 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="7" started-at="2023-03-14T15:50:51 IST" finished-at="2023-03-14T15:50:51 IST">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="7048" started-at="2023-03-12T19:42:09 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:16 IST">
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="30024" started-at="2023-03-14T15:50:51 IST" data-provider="productdetails" finished-at="2023-03-14T15:51:21 IST">
           <params>
             <param index="0">
               <value>
@@ -42,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItemtoCart -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-12T19:42:16 IST" finished-at="2023-03-12T19:42:16 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="2" started-at="2023-03-14T15:51:21 IST" finished-at="2023-03-14T15:51:21 IST">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="10525" started-at="2023-03-12T19:42:16 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:26 IST">
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="31006" started-at="2023-03-14T15:51:21 IST" data-provider="productdetails" finished-at="2023-03-14T15:51:52 IST">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItemtoCart -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="2" started-at="2023-03-12T19:42:26 IST" finished-at="2023-03-12T19:42:26 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="3" started-at="2023-03-14T15:51:52 IST" finished-at="2023-03-14T15:51:52 IST">
           <params>
             <param index="0">
               <value>
@@ -80,7 +80,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="11434" started-at="2023-03-12T19:42:26 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:38 IST">
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="38527" started-at="2023-03-14T15:51:52 IST" data-provider="productdetails" finished-at="2023-03-14T15:52:30 IST">
           <params>
             <param index="0">
               <value>
@@ -96,7 +96,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItemtoCart -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="5" started-at="2023-03-12T19:42:38 IST" finished-at="2023-03-12T19:42:38 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-14T15:52:30 IST" finished-at="2023-03-14T15:52:30 IST">
           <params>
             <param index="0">
               <value>
@@ -107,7 +107,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="10681" started-at="2023-03-12T19:42:38 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:49 IST">
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="32416" started-at="2023-03-14T15:52:30 IST" data-provider="productdetails" finished-at="2023-03-14T15:53:03 IST">
           <params>
             <param index="0">
               <value>
@@ -123,7 +123,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItemtoCart -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="2" started-at="2023-03-12T19:42:49 IST" finished-at="2023-03-12T19:42:49 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-14T15:53:03 IST" finished-at="2023-03-14T15:53:03 IST">
           <params>
             <param index="0">
               <value>
@@ -134,7 +134,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="8685" started-at="2023-03-12T19:42:49 IST" data-provider="productdetails" finished-at="2023-03-12T19:42:57 IST">
+        <test-method status="PASS" signature="addItemtoCart(java.lang.String,java.lang.String)[pri:2, instance:testScripts.BlazeWebApp@5427c60c]" name="addItemtoCart" duration-ms="39491" started-at="2023-03-14T15:53:03 IST" data-provider="productdetails" finished-at="2023-03-14T15:53:42 IST">
           <params>
             <param index="0">
               <value>
@@ -150,7 +150,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItemtoCart -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="10" started-at="2023-03-12T19:42:57 IST" finished-at="2023-03-12T19:42:57 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="6" started-at="2023-03-14T15:53:42 IST" finished-at="2023-03-14T15:53:42 IST">
           <params>
             <param index="0">
               <value>
@@ -161,11 +161,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="deleteItem()[pri:3, instance:testScripts.BlazeWebApp@5427c60c]" name="deleteItem" duration-ms="3784" started-at="2023-03-12T19:42:57 IST" finished-at="2023-03-12T19:43:01 IST">
+        <test-method status="PASS" signature="deleteItem()[pri:3, instance:testScripts.BlazeWebApp@5427c60c]" name="deleteItem" duration-ms="15708" started-at="2023-03-14T15:53:42 IST" finished-at="2023-03-14T15:53:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteItem -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-12T19:43:01 IST" finished-at="2023-03-12T19:43:01 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-14T15:53:58 IST" finished-at="2023-03-14T15:53:58 IST">
           <params>
             <param index="0">
               <value>
@@ -176,11 +176,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="finalOrder()[pri:4, instance:testScripts.BlazeWebApp@5427c60c]" name="finalOrder" duration-ms="4730" started-at="2023-03-12T19:43:01 IST" finished-at="2023-03-12T19:43:06 IST">
+        <test-method status="PASS" signature="finalOrder()[pri:4, instance:testScripts.BlazeWebApp@5427c60c]" name="finalOrder" duration-ms="2931" started-at="2023-03-14T15:53:58 IST" finished-at="2023-03-14T15:54:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalOrder -->
-        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="1" started-at="2023-03-12T19:43:06 IST" finished-at="2023-03-12T19:43:06 IST">
+        <test-method status="PASS" signature="failure(org.testng.ITestResult)[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="failure" is-config="true" duration-ms="13" started-at="2023-03-14T15:54:01 IST" finished-at="2023-03-14T15:54:01 IST">
           <params>
             <param index="0">
               <value>
@@ -191,7 +191,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure -->
-        <test-method status="PASS" signature="extentfinishUp()[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="extentfinishUp" is-config="true" duration-ms="2509" started-at="2023-03-12T19:43:06 IST" finished-at="2023-03-12T19:43:08 IST">
+        <test-method status="PASS" signature="extentfinishUp()[pri:0, instance:testScripts.BlazeWebApp@5427c60c]" name="extentfinishUp" is-config="true" duration-ms="2250" started-at="2023-03-14T15:54:01 IST" finished-at="2023-03-14T15:54:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentfinishUp -->
