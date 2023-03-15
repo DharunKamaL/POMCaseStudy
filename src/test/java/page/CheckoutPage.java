@@ -52,15 +52,14 @@ public class CheckoutPage extends TestBase{
 		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(placeOrderBtn));
 		placeOrderBtn.click();
-		wait.until(ExpectedConditions.elementToBeClickable(inputName));
 		inputName.sendKeys(prop.getProperty("Name"));
+		wait.until(ExpectedConditions.elementToBeClickable(inputCountry));
 		inputCountry.sendKeys(prop.getProperty("Country"));
 		inputCity.sendKeys(prop.getProperty("City"));
 		inputCard.sendKeys(prop.getProperty("CreditCard"));
 		inputMonth.sendKeys(prop.getProperty("Month"));
-		inputCity.sendKeys(prop.getProperty("Year"));
+		wait.until(ExpectedConditions.elementToBeClickable(inputYear));
+		inputYear.sendKeys(prop.getProperty("Year"));
 		purchaseBtn.click();
 	}
-	
-
 }

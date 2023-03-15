@@ -43,6 +43,5 @@ public class LoginPage extends TestBase {
 		passInput.sendKeys(password);
 		submitBtn.click();
 		return new AddItemToCartPage();
-		
 	}
 }

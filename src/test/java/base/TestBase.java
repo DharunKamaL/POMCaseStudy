@@ -20,8 +20,6 @@ public class TestBase {
 	public static Properties prop = null;
 	public static WebDriver driver = null;
 	
-
-
 	public TestBase() {
 		String path = System.getProperty("user.dir") +
 					"//src//test//resources//configFiles//config.properties";

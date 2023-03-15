@@ -63,9 +63,9 @@ public class BlazeWebApp extends TestBase {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		login = new LoginPage();
 		login.logIn(prop.getProperty("username"), prop.getProperty("password"));
-		WebElement wel = login.welcome;
-		wait.until(ExpectedConditions.visibilityOf(wel));
-		Assert.assertEquals(wel.getText(), "Welcome Dharun_K");
+		WebElement welcomeTxt = login.welcome;
+		wait.until(ExpectedConditions.visibilityOf(welcomeTxt));
+		Assert.assertEquals(welcomeTxt.getText(), "Welcome Dharun_K");
 	}
 
 	@Test(priority = 2, dataProvider = "productdetails")
@@ -84,7 +84,6 @@ public class BlazeWebApp extends TestBase {
 		while ((cols = reader.readNext()) != null) {
 			Object[] rec = { cols[0], cols[1] };
 			dList.add(rec);
-
 		}
 		return dList.toArray(new Object[dList.size()][]);
 	}
@@ -95,27 +94,33 @@ public class BlazeWebApp extends TestBase {
 		extentTest = reports.createTest("deleteItem");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		productList = new ProductListCartPage();
-		productList.ProductListPage();
-		productList.mouseAction();
-		List<WebElement> proList = productList.products;
-		wait.until(ExpectedConditions.visibilityOfAllElements(proList));
+		productList.cartClick();
 		
-		int initialproSize = proList.size();
+		List<WebElement> proList1 = productList.products;
+		wait.until(ExpectedConditions.visibilityOfAllElements(proList1));
+		productList.mouseAction();
+		int initialproSize = proList1.size();
 		WebElement proNameBef = productList.productName;
 		String product1 = proNameBef.getText();
 //		boolean proAdded = true;
 		if (initialproSize > 1) {
 			productList.delItem();
+			Thread.sleep(5000);
+//			Assert.assertTrue(proAdded);
 		}
 		
-//		Assert.assertTrue(proAdded);
-		productList.Check();
+		List<WebElement> proList2 = productList.products;
+		wait.until(ExpectedConditions.visibilityOfAllElements(proList2));
+//		int currentproSize = proList2.size();
+//		if(initialproSize > currentproSize) {
+//			Assert.assertTrue(true);
+//		}
+		
 		WebElement proNameAft = productList.productName;
 		String product2 = proNameAft.getText();
 		if (product1 != product2) {
 			Assert.assertTrue(true);
 		}
-
 	}
 
 	@Test(priority = 4)
@@ -143,5 +148,4 @@ public class BlazeWebApp extends TestBase {
 	public void extentfinishUp() {
 		reports.flush();
 	}
-
 }

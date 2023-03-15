@@ -32,7 +32,7 @@ public class ProductListCartPage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void ProductListPage() {
+	public void cartClick() {
 		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOf(CartBtn));
 		CartBtn.click();
@@ -42,17 +42,18 @@ public class ProductListCartPage extends TestBase{
 		actions.scrollByAmount(0, 200).perform();
 	}
 	
+//	public void Check() {
+//		wait.until(ExpectedConditions.visibilityOfAllElements(products));		
+//	}
+	
 	public void delItem() {
 		
 		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOf(DelBtn));
 		DelBtn.click();
-		
 	}
 	
-	public void Check() {
-		wait.until(ExpectedConditions.visibilityOfAllElements(products));		
-	}
+	
 	
 	
 	
