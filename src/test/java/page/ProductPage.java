@@ -13,29 +13,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 
-public class AddItemToCartPage extends TestBase {
+public class ProductPage extends TestBase {
 	
+	WebDriverWait wait;
 	
+	@FindBy(xpath = "//a[text()='Add to cart']")
+	WebElement addtocartBtn;
 	
 	@FindBy(xpath = "(//ul/li//a)[1]")
-	WebElement Home;
+	WebElement homeBtn;
 	
-	public AddItemToCartPage() {
+	public ProductPage() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public ProductListCartPage additems(String productCategory, String productName) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(40));
-		actions.scrollByAmount(0, 200).perform();
-		driver.findElement(By.linkText(productCategory)).click();
-		actions.scrollByAmount(0, 200).perform();
-		driver.findElement(By.linkText(productName)).click();
-		driver.findElement(By.xpath("//a[text()='Add to cart']")).click();
+	public void addtoCart() {
+		
+		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOf(addtocartBtn));
+		addtocartBtn.click();
 		wait.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
-		Home.click();
-		return new ProductListCartPage();
+		homeBtn.click();
+	
 	}
+	
 
 }

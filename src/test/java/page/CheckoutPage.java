@@ -14,9 +14,6 @@ public class CheckoutPage extends TestBase{
 	
 	WebDriverWait wait;
 	
-	@FindBy(xpath = "//button[text()='Place Order']")
-	WebElement placeOrderBtn;
-	
 	@FindBy(css = "input[id=name]")
 	WebElement inputName;
 	
@@ -50,15 +47,12 @@ public class CheckoutPage extends TestBase{
 	
 	public void placeOrder() {
 		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(placeOrderBtn));
-		placeOrderBtn.click();
+		wait.until(ExpectedConditions.visibilityOf(inputName));
 		inputName.sendKeys(prop.getProperty("Name"));
-		wait.until(ExpectedConditions.elementToBeClickable(inputCountry));
 		inputCountry.sendKeys(prop.getProperty("Country"));
 		inputCity.sendKeys(prop.getProperty("City"));
 		inputCard.sendKeys(prop.getProperty("CreditCard"));
 		inputMonth.sendKeys(prop.getProperty("Month"));
-		wait.until(ExpectedConditions.elementToBeClickable(inputYear));
 		inputYear.sendKeys(prop.getProperty("Year"));
 		purchaseBtn.click();
 	}

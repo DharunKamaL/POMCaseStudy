@@ -31,18 +31,20 @@ import com.opencsv.exceptions.CsvValidationException;
 
 import CommonUtils.Utility;
 import base.TestBase;
-import page.AddItemToCartPage;
+import page.ProductPage;
 import page.CheckoutPage;
+import page.HomePage;
 import page.LoginPage;
-import page.ProductListCartPage;
+import page.CartPage;
 
 public class BlazeWebApp extends TestBase {
 
 	WebDriverWait wait;
-
-	LoginPage login;
-	AddItemToCartPage additem;
-	ProductListCartPage productList;
+	
+	HomePage homePage;
+	LoginPage loginPage;
+	ProductPage singleproPage;
+	CartPage mulproPage;
 	CheckoutPage checkoutPage;
 
 	ExtentReports reports;
@@ -61,9 +63,11 @@ public class BlazeWebApp extends TestBase {
 	public void validLogin() {
 		extentTest = reports.createTest("validLogin");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		login = new LoginPage();
-		login.logIn(prop.getProperty("username"), prop.getProperty("password"));
-		WebElement welcomeTxt = login.welcome;
+		homePage = new HomePage();
+		homePage.logIn();
+		loginPage = new LoginPage();
+		loginPage.logIn(prop.getProperty("username"), prop.getProperty("password"));
+		WebElement welcomeTxt = homePage.welcome;
 		wait.until(ExpectedConditions.visibilityOf(welcomeTxt));
 		Assert.assertEquals(welcomeTxt.getText(), "Welcome Dharun_K");
 	}
@@ -71,8 +75,10 @@ public class BlazeWebApp extends TestBase {
 	@Test(priority = 2, dataProvider = "productdetails")
 	public void addItemtoCart(String productCategory, String productName) {
 		extentTest = reports.createTest("addItemtoCart");
-		additem = new AddItemToCartPage();
-		additem.additems(productCategory, productName);
+		homePage = new HomePage();
+		homePage.additems(productCategory, productName);
+		singleproPage = new ProductPage();
+		singleproPage.addtoCart();
 	}
 
 	@DataProvider(name = "productdetails")
@@ -93,39 +99,41 @@ public class BlazeWebApp extends TestBase {
 
 		extentTest = reports.createTest("deleteItem");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		productList = new ProductListCartPage();
-		productList.cartClick();
-		
-		List<WebElement> proList1 = productList.products;
+		homePage = new HomePage();
+		homePage.cartClick();
+		mulproPage = new CartPage();
+		List<WebElement> proList1 = mulproPage.products;
 		wait.until(ExpectedConditions.visibilityOfAllElements(proList1));
-		productList.mouseAction();
 		int initialproSize = proList1.size();
-		WebElement proNameBef = productList.productName;
+		WebElement proNameBef = mulproPage.productName;
 		String product1 = proNameBef.getText();
 //		boolean proAdded = true;
 		if (initialproSize > 1) {
-			productList.delItem();
+			mulproPage.delItem();
 			Thread.sleep(5000);
 //			Assert.assertTrue(proAdded);
 		}
 		
-		List<WebElement> proList2 = productList.products;
+		List<WebElement> proList2 = mulproPage.products;
 		wait.until(ExpectedConditions.visibilityOfAllElements(proList2));
-//		int currentproSize = proList2.size();
-//		if(initialproSize > currentproSize) {
-//			Assert.assertTrue(true);
-//		}
 		
-		WebElement proNameAft = productList.productName;
+		WebElement proNameAft = mulproPage.productName;
 		String product2 = proNameAft.getText();
 		if (product1 != product2) {
 			Assert.assertTrue(true);
 		}
+		
+//		int currentproSize = proList2.size();
+//		if(initialproSize > currentproSize) {
+//			Assert.assertTrue(true);
+//		}
 	}
 
 	@Test(priority = 4)
 	public void finalOrder() {
 		extentTest = reports.createTest("finalOrder");
+		mulproPage = new CartPage();
+		mulproPage.placeOrdBtn();
 		checkoutPage = new CheckoutPage();
 		checkoutPage.placeOrder();
 		WebElement vrfyPur = checkoutPage.verifyPurchase;

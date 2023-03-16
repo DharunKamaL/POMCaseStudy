@@ -16,8 +16,7 @@ import base.TestBase;
 
 public class LoginPage extends TestBase {
 
-	@FindBy(xpath = "//a[text()='Log in']")
-	WebElement loginBtn;
+	
 
 	@FindBy(css = "input[id = loginusername]")
 	WebElement userInput;
@@ -28,20 +27,15 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath = "//button[text() = 'Log in']")
 	WebElement submitBtn;
 	
-	@FindBy(xpath = "//a[contains(text(),'Welcome')]")
-	public WebElement welcome;
-	
 	public LoginPage(){
 		PageFactory.initElements(driver, this);
 	}
 
-	public AddItemToCartPage logIn(String username, String password) {
-		loginBtn.click();
+	public void logIn(String username, String password) {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(userInput));
 		userInput.sendKeys(username);
 		passInput.sendKeys(password);
 		submitBtn.click();
-		return new AddItemToCartPage();
 	}
 }

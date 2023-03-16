@@ -12,12 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 
-public class ProductListCartPage extends TestBase{
+public class CartPage extends TestBase{
 	
 	WebDriverWait wait;
 	
-	@FindBy(xpath = "//a[text()='Cart']")
-	public WebElement CartBtn;
+	
 	
 	@FindBy(xpath = "//tr/td[2]")
 	public List<WebElement> products;
@@ -26,33 +25,27 @@ public class ProductListCartPage extends TestBase{
 	public WebElement productName;
 	
 	@FindBy(xpath = "(//tr/td//a)[1]")
-	WebElement DelBtn;
+	WebElement delBtn;
 	
-	public ProductListCartPage() {
+	@FindBy(xpath = "//button[text()='Place Order']")
+	WebElement placeOrderBtn;
+	
+	public CartPage() {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void cartClick() {
-		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOf(CartBtn));
-		CartBtn.click();
-	}
-	
-	public void mouseAction() {
-		actions.scrollByAmount(0, 200).perform();
-	}
-	
-//	public void Check() {
-//		wait.until(ExpectedConditions.visibilityOfAllElements(products));		
-//	}
-	
 	public void delItem() {
-		
 		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOf(DelBtn));
-		DelBtn.click();
+		wait.until(ExpectedConditions.visibilityOf(delBtn));
+		delBtn.click();
 	}
 	
+	public CheckoutPage placeOrdBtn() {
+		wait = new WebDriverWait(driver,Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOf(placeOrderBtn));
+		placeOrderBtn.click();
+		return new CheckoutPage();
+	}
 	
 	
 	
