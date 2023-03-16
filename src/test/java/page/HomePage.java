@@ -34,7 +34,7 @@ public class HomePage extends TestBase{
 		return new LoginPage();
 	}
 	
-	public ProductPage additems(String productCategory, String productName) {
+	public ProductPage selectItems(String productCategory, String productName) {
 		driver.findElement(By.linkText(productCategory)).click();
 		driver.findElement(By.linkText(productName)).click();
 		return new ProductPage();

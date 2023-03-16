@@ -76,7 +76,7 @@ public class BlazeWebApp extends TestBase {
 	public void addItemtoCart(String productCategory, String productName) {
 		extentTest = reports.createTest("addItemtoCart");
 		homePage = new HomePage();
-		homePage.additems(productCategory, productName);
+		homePage.selectItems(productCategory, productName);
 		singleproPage = new ProductPage();
 		singleproPage.addtoCart();
 	}
